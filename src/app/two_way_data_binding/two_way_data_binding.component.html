@@ -1,0 +1,34 @@
+<h1>2-WAY DATA BINDING</h1>
+
+<p>
+    We add the {{ ngModelString }} directive to the element 
+    where we want to use 2-way data binding.
+    Then we set the directive equal to the variable name, which
+    is defined in the typescrpt file for the component we are working in.
+</p>
+
+<pre><code class="language-javascript">&lt;input type=&quot;text&quot; [(ngModel)]=&quot;name&quot;&gt;</code></pre>
+
+<p>
+    Before this will work, we need import FormsModule in the app.module.ts file.
+</p>
+
+<pre><code class="language-javascript">import {{ formsModuleString }} from '@angular/forms';</code></pre>
+
+<p>Then we must add the FormsModule to our imports array in the app.module.ts file.</p>
+
+<pre><code class="language-javascript">@NgModule({{ openBracketString }}
+    declarations: [
+        AppComponent,
+        TwoWayDataBindingComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+{{ closeBracketString }})</code></pre>
+
+<input type="text" [(ngModel)]="name">
+<h3>{{ name }}</h3>

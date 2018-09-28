@@ -1,0 +1,25 @@
+<h1>ADDING BOOTSTRAP TO ANGULAR PROJECT</h1>
+
+<p>
+    Make sure that your local server is NOT running.<br/>
+    From the project directory run:
+</p>
+
+<pre><code class="language-javascript">npm install --save bootstrap@3</code></pre>
+
+<p>
+    Inside of the angular.json file, which can be found in the root directory of your project; 
+    add: node_modules/bootstrap/dist/css/bootstrap.min.css to the styles array.
+</p>
+
+<pre><code class="language-javascript">"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+],</code></pre>
+
+<p>
+    Restart your server.
+</p>
+
+<pre><code class="language-javascript">ng serve</code></pre>
+
